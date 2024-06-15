@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'apps.base',
     'apps.library',
     'apps.news',
-    'apps.registration',
+    'apps.gallery',
 ]
 
 MIDDLEWARE = [
@@ -77,6 +77,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'apps.base.context_processors.navbar_choices',  # Add this line
             ],
         },
     },
