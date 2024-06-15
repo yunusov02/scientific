@@ -1,0 +1,8 @@
+venv/
+.env
+# Pyhon byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+db.sqlite3
+text.txt
