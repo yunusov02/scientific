@@ -76,7 +76,7 @@
 											</li>
 											<li><a href="#">Talabalar uchun </a></li>
 											<li><a href="#">Faoliyat </a></li>
-											<li><a href="#">E'lonlar <i class="icofont-rounded-down"></i></a>
+											<li><a href="{% url 'news_list' %}">E'lonlar <i class="icofont-rounded-down"></i></a>
 												<ul class="dropdown">
 													{% for id, new in news %}
 													<li><a href="#">{{ new }}</a></li>

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block context %}
+
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-lg-8 col-12">
+            <div class="single-widget recent-post">
+                <h3 class="title">Yangiliklar</h3>
+                <!-- Single Post -->
+                {% for nw in news_objects %}
+                    <div class="single-post">
+                        <div class="image">
+                            <img src="{{ nw.photo.url }}" alt="#">
+                        </div>
+                        <div class="content">
+                            <h5><a href="#">{{ nw.title }}</a></h5>
+                            <ul class="comment">
+                                <li><i class="fa fa-calendar" aria-hidden="true"></i>{{ nw.added_date }}</li>
+                                <li><i class="fa-solid fa-eye" aria-hidden="true"></i> {{ nw.views }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                {% endfor %}
+                <!-- End Single Post -->
+            </div>
+            
+            {% include 'paginatoin.html' %}
+        </div>
+        
+        
+        <div class="col-lg-4 col-12">
+            <div class="main-sidebar">
+                <!-- Single Widget -->
+                <form method="get">
+                    <div class="single-widget search">
+                        <div class="form">
+                            <input type="text" name="q" value="{{ request.GET.q }}">
+                            <button class="button" type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>    
+                </form>
+                <!--/ End Single Widget -->
+                <!-- Single Widget -->
+                <div class="single-widget category">
+                    <h3 class="title">E'lonlar</h3>
+                    <ul class="categor-list">
+                        {% for id, new in news %}
+                            <li><a href="#">{{ new }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <!--/ End Single Widget -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

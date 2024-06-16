@@ -10,7 +10,7 @@ from .models import News
 
 class NewsListView(ListView):
     model = News
-    context_object_name = "news"
+    context_object_name = "news_objects"
     template_name = "news/list_news.html"
     paginate_by = 15
 
