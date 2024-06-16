@@ -43,3 +43,6 @@ def faoliyat(request):
     return render(request, "faoliyat-details.html")
 
 
+def contactus(request):
+    return render(request, "contact.html")
+
