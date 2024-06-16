@@ -16,8 +16,14 @@ class NewsListView(ListView):
 
     def get_queryset(self):
         query = self.request.GET.get('q')
+        news_type = self.request.GET.get('news_type')
+
         if query:
             return News.objects.filter(title__icontains=query)
+        
+        if news_type:
+            return News.objects.filter(news_type=news_type)
+        
         return News.objects.all()
     
 
@@ -32,8 +38,6 @@ class NewsDetailView(DetailView):
         news = self.get_object()
         news.views += 1
         news.save()
-
-        
 
         return super().get_context_data(**kwargs)
 

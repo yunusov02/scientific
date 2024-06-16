@@ -16,8 +16,13 @@ class LibraryListView(ListView):
 
     def get_queryset(self):
         query = self.request.GET.get('q')
+        topic = self.request.GET.get('topic')
         if query:
             return Library.objects.filter(title__icontains=query)
+        
+        if topic:
+            return Library.objects.filter(document_type=topic)
+
         return Library.objects.all()
 
 
