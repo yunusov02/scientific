@@ -35,7 +35,6 @@ def home_page(request):
         "last_three_video": last_three_video
     }
 
-    print(context)
 
     return render(request, "home.html", context=context)
 

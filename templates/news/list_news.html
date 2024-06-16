@@ -14,7 +14,7 @@
                             <img src="{{ nw.photo.url }}" alt="#">
                         </div>
                         <div class="content">
-                            <h5><a href="#">{{ nw.title }}</a></h5>
+                            <h5><a href="{% url 'news-detail' nw.id %}">{{ nw.title }}</a></h5>
                             <ul class="comment">
                                 <li><i class="fa fa-calendar" aria-hidden="true"></i>{{ nw.added_date }}</li>
                                 <li><i class="fa-solid fa-eye" aria-hidden="true"></i> {{ nw.views }}</li>

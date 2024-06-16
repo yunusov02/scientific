@@ -24,7 +24,7 @@ class NewsListView(ListView):
 
 class NewsDetailView(DetailView):
     model = News
-    context_object_name = "group"
+    context_object_name = "new"
     template_name = "news/detail_news.html"
 
     def get_context_data(self, **kwargs):
@@ -33,5 +33,7 @@ class NewsDetailView(DetailView):
         news.views += 1
         news.save()
 
-        super().get_context_data(**kwargs)
+        
+
+        return super().get_context_data(**kwargs)
 
