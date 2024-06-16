@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+{% block context %}
 <section class="slider">
     <div class="hero-slider">
         <!-- Start Single Slider -->
@@ -7,8 +9,8 @@
                 <div class="row">
                     <div class="col-lg-7">
                         <div class="text">
-                            <h1>{{ last_three_library.title }}</h1>
-                            <p class="truncate">{{ last_three_library.description }}</p>
+                            <h1>{{ library.title }}</h1>
+                            <p class="truncate">{{ library.description }}</p>
 
                             <div class="button">
                                 <a href="#" class="btn">Kirish</a>
@@ -20,17 +22,17 @@
         </div>
         {% endfor %}
         <!-- End Single Slider -->
-
     </div>
 </section>
 <!--/ End Slider Area -->
+
 
 <!-- Start Schedule Area -->
 <section class="schedule">
     <div class="container">
         <div class="schedule-inner">
-            {% for news in last_three_news %}
             <div class="row">
+                {% for news in last_three_news %}    
                 <div class="col-lg-4 col-md-6 col-12 ">
                     <!-- single-schedule -->
                     <div class="single-schedule first">
@@ -39,16 +41,16 @@
                                 <i class="fa fa-ambulance"></i>
                             </div>
                             <div class="single-content">
-                                <span>{{ last_three_news.get_news_type_display }}</span>
-                                <h4>{{ last_three_news.title }}</h4>
-                                <p class="truncate">{{ last_three_news.description }}</p>
+                                <span>{{ news.get_news_type_display }}</span>
+                                <h4>{{ news.title }}</h4>
+                                <p class="truncate">{{ news.description }}</p>
                                 <a href="#">Kirish<i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
 </section>
@@ -113,7 +115,7 @@
                 <div class="single-fun">
                     <i class="icofont icofont-home"></i>
                     <div class="content">
-                        <span class="counter">3468</span>
+                        <span class="counter">{{ total_count_library }}</span>
                         <p>Jami yuklangan materiallar</p>
                     </div>
                 </div>
@@ -124,7 +126,7 @@
                 <div class="single-fun">
                     <i class="icofont icofont-user-alt-3"></i>
                     <div class="content">
-                        <span class="counter">557</span>
+                        <span class="counter">{{ total_count_views }}</span>
                         <p>Jami ko'rishlar soni</p>
                     </div>
                 </div>
@@ -135,7 +137,7 @@
                 <div class="single-fun">
                     <i class="icofont-simple-smile"></i>
                     <div class="content">
-                        <span class="counter">4379</span>
+                        <span class="counter">{{ current_month_upload_count }}</span>
                         <p>Bu oyda yuklangan materiallar soni</p>
                     </div>
                 </div>
@@ -146,7 +148,7 @@
                 <div class="single-fun">
                     <i class="icofont icofont-table"></i>
                     <div class="content">
-                        <span class="counter">32</span>
+                        <span class="counter">{{ current_month_upload_views }}</span>
                         <p>Bu oydagi ko'rishlar soni</p>
                     </div>
                 </div>
@@ -178,34 +180,6 @@
                         <img src="img/pf1.jpg" alt="#">
                         <a href="portfolio-details.html" class="btn">View Details</a>
                     </div>
-                    <div class="single-pf">
-                        <img src="img/pf2.jpg" alt="#">
-                        <a href="portfolio-details.html" class="btn">View Details</a>
-                    </div>
-                    <div class="single-pf">
-                        <img src="img/pf3.jpg" alt="#">
-                        <a href="portfolio-details.html" class="btn">View Details</a>
-                    </div>
-                    <div class="single-pf">
-                        <img src="img/pf4.jpg" alt="#">
-                        <a href="portfolio-details.html" class="btn">View Details</a>
-                    </div>
-                    <div class="single-pf">
-                        <img src="img/pf1.jpg" alt="#">
-                        <a href="portfolio-details.html" class="btn">View Details</a>
-                    </div>
-                    <div class="single-pf">
-                        <img src="img/pf2.jpg" alt="#">
-                        <a href="portfolio-details.html" class="btn">View Details</a>
-                    </div>
-                    <div class="single-pf">
-                        <img src="img/pf3.jpg" alt="#">
-                        <a href="portfolio-details.html" class="btn">View Details</a>
-                    </div>
-                    <div class="single-pf">
-                        <img src="img/pf4.jpg" alt="#">
-                        <a href="portfolio-details.html" class="btn">View Details</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -231,13 +205,6 @@
                     <div class="news-head">
                         <img src="img/blog1.jpg" alt="#">
                     </div>
-                    <div class="news-body">
-                        <div class="news-content">
-                            <div class="date">22 Aug, 2020</div>
-                            <h2><a href="blog-single.html">We have annnocuced our new product.</a></h2>
-                            <p class="text">Lorem ipsum dolor a sit ameti, consectetur adipisicing elit, sed do eiusmod tempor incididunt sed do incididunt sed.</p>
-                        </div>
-                    </div>
                 </div>
                 <!-- End Single Blog -->
             </div>
@@ -245,3 +212,4 @@
     </div>
 </section>
 <!-- End Blog Area -->
+{% endblock %}

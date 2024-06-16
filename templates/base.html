@@ -54,7 +54,7 @@
 							<div class="col-lg-2 col-md-3 col-20">
 								<!-- Start Logo -->
 								<div class="logo">
-									<a href="index.html"><img style="height: 50px; width: 50px;" src="{% static 'img/logo.webp' %}" alt="#"></a>
+									<a href="{% url 'home_page' %}"><img style="height: 50px; width: 50px;" src="{% static 'img/logo.webp' %}" alt="#"></a>
 								</div>
 								<!-- End Logo -->
 								<!-- Mobile Nav -->
@@ -66,21 +66,27 @@
 								<div class="main-menu">
 									<nav class="navigation">
 										<ul class="nav menu">
-											<li class="active"><a href="#">KUTUBXONA <i class="icofont-rounded-down"></i></a>
+											<li><a href="#">KUTUBXONA <i class="icofont-rounded-down"></i></a>
 												<ul class="dropdown">
-													<li><a href="index.html">Home Page 1</a></li>
+													{% for id, library in libraries %}
+													<li><a href="#">{{ library }}</a></li>
+													{% endfor %}
 												</ul>
+												
 											</li>
 											<li><a href="#">Talabalar uchun </a></li>
 											<li><a href="#">Faoliyat </a></li>
 											<li><a href="#">E'lonlar <i class="icofont-rounded-down"></i></a>
 												<ul class="dropdown">
-													<li><a href="404.html">404 Error</a></li>
+													{% for id, new in news %}
+													<li><a href="#">{{ new }}</a></li>
+													{% endfor %}
 												</ul>
 											</li>
 											<li><a href="#">Mediateka <i class="icofont-rounded-down"></i></a>
 												<ul class="dropdown">
-													<li><a href="blog-single.html">Blog Details</a></li>
+													<li><a href="#">FOTOGALEREYA</a></li>
+													<li><a href="#">VIDEOGALEREYA</a></li>
 												</ul>
 											</li>
 											<li><a href="contact.html">Biz bilan bog'laning</a></li>
@@ -97,6 +103,9 @@
 			<!--/ End Header Inner -->
 		</header>
 
+		{% block context %}
+
+		{% endblock %}
 		
 		<!-- Footer Area -->
 		<footer id="footer" class="footer ">
