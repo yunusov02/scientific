@@ -16,20 +16,21 @@ class LibraryListView(ListView):
 
     def get_queryset(self):
         query = self.request.GET.get('q')
-        topic = self.request.GET.get('topic')
+
         if query:
             return Library.objects.filter(title__icontains=query)
-        
-        if topic:
-            return Library.objects.filter(document_type=topic)
 
         return Library.objects.all()
 
 
+def library_topic_view(request, pk):
+    libraries = Library.objects.filter(type=pk)
+    return render(request, "library/list_library.html", {"libraries_objects": libraries})
+
 
 class LibraryDetailView(DetailView):
     model = Library
-    context_object_name = "library"
+    context_object_name = "lib"
     template_name = "library/detail_library.html"
     
     def get_context_data(self, **kwargs):
@@ -38,5 +39,5 @@ class LibraryDetailView(DetailView):
         library.views += 1
         library.save()
 
-        super().get_context_data(**kwargs)
+        return super().get_context_data(**kwargs)
 

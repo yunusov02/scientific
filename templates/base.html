@@ -69,7 +69,7 @@
 											<li><a href="{% url 'library_list' %}">KUTUBXONA <i class="icofont-rounded-down"></i></a>
 												<ul class="dropdown">
 													{% for id, library in libraries %}
-													<li><a href="#">{{ library }}</a></li>
+													<li><a href="{% url 'library_topic' id %}">{{ library }}</a></li>
 													{% endfor %}
 												</ul>
 												
@@ -79,7 +79,7 @@
 											<li><a href="{% url 'news_list' %}">E'lonlar <i class="icofont-rounded-down"></i></a>
 												<ul class="dropdown">
 													{% for id, new in news %}
-													<li><a href="#">{{ new }}</a></li>
+													<li><a href="{% url 'news_topic' id %}">{{ new }}</a></li>
 													{% endfor %}
 												</ul>
 											</li>

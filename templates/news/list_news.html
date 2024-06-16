@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-lg-8 col-12">
             <div class="single-widget recent-post">
-                <h3 class="title">Yangiliklar</h3>
+                <h3 class="title mb-5">Yangiliklar</h3>
                 <!-- Single Post -->
                 {% for nw in news_objects %}
                     <div class="single-post">
@@ -46,7 +46,7 @@
                     <h3 class="title">E'lonlar</h3>
                     <ul class="categor-list">
                         {% for id, new in news %}
-                            <li><a href="#">{{ new }}</a></li>
+                            <li><a href="{% url 'news_topic' id %}">{{ new }}</a></li>
                         {% endfor %}
                     </ul>
                 </div>

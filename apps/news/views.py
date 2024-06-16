@@ -16,16 +16,16 @@ class NewsListView(ListView):
 
     def get_queryset(self):
         query = self.request.GET.get('q')
-        news_type = self.request.GET.get('news_type')
 
         if query:
             return News.objects.filter(title__icontains=query)
         
-        if news_type:
-            return News.objects.filter(news_type=news_type)
-        
         return News.objects.all()
-    
+
+
+def news_topic_view(request, pk):
+    news = News.objects.filter(news_type=pk)
+    return render(request, "news/list_news.html", {"news_objects": news})
 
 
 class NewsDetailView(DetailView):
