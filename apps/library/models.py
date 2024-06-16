@@ -18,7 +18,7 @@ class Library(models.Model):
         (5, "Monografiya"),
     )
 
-    type = models.IntegerField()
+    type = models.IntegerField(choices=DOCUMENT_TYPE)
     department = models.ForeignKey(Department, on_delete=models.SET_NULL, null=True)
 
     full_name = models.CharField(max_length=255)
@@ -28,7 +28,7 @@ class Library(models.Model):
     description = models.TextField()
     pdf = models.FileField(upload_to='documents/')
 
-    views = models.IntegerField()
+    views = models.IntegerField(default=1)
     added_date = models.DateTimeField(auto_now_add=True)
 
     class Meta:

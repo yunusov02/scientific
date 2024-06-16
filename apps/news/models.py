@@ -17,11 +17,14 @@ class News(models.Model):
     news_type = models.IntegerField(choices=NEWS_TYPE)
     title = models.CharField(max_length=1023)
     description = models.TextField()
-    photo = models.ImageField(upload_to='news/')
+    photo = models.ImageField(upload_to='news/', default='static/img/defalut.jpg')
 
-    views = models.IntegerField()
+    views = models.IntegerField(default=1)
     added_date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         ordering = ['-added_date']
 
+
+    def __str__(self):
+        return self.title[:50]
