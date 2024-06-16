@@ -645,6 +645,15 @@ body{
     width: 100%;
 	margin-top:-25px;
 }
+
+.truncate {
+	display: -webkit-box;
+	-webkit-line-clamp: 3; /* Ko'rsatiladigan qatorlar soni */
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
 .slider .owl-carousel .owl-nav div {
 	height: 50px;
 	width: 50px;
