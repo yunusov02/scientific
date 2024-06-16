@@ -40,3 +40,7 @@ def home_page(request):
     return render(request, "home.html", context=context)
 
 
+def faoliyat(request):
+    return render(request, "faoliyat-details.html")
+
+
