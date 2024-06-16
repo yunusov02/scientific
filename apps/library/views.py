@@ -9,7 +9,7 @@ from .models import Library
 
 class LibraryListView(ListView):
     model = Library
-    context_object_name = "libraries"
+    context_object_name = "libraries_objects"
     template_name = "library/list_library.html"
     paginate_by = 15
 

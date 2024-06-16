@@ -1,6 +1,6 @@
 from django.urls import path, include
 
-from .views import home_page
+from .views import home_page, faoliyat
 
 
 urlpatterns = [
@@ -8,6 +8,7 @@ urlpatterns = [
     path("gallery/", include("apps.gallery.urls")),
     path("library/", include("apps.library.urls")),
     path("news/", include("apps.news.urls")),
+    path("faoliyat/", faoliyat, name="faoliyat"),
 ]
 
 
