@@ -1,4 +1,7 @@
 {% extends 'base.html' %}
+
+{% load static %}
+
 {% block context %}
 
    <section class="pf-details section">
@@ -6,10 +9,8 @@
 				<div class="row">
 					<div class="col-12">
 						<div class="inner-content">
-							<div class="image-slider">
-								<div class="pf-details-slider">
-									<img src="{% static 'img/faoliyat_back.jpg' %}" alt="#">
-								</div>
+							<div class="container">
+								<img src="{% static 'img/faoilyat-bg.jpg' %}" alt="#" style="width: max-content; height: auto; max-height: 50%;">
 							</div>
 							<div class="body-text">
 								<h3>Ilmiy tadqiqotlar, innovatsiyalar va ilmiy pedagogik kadrlar tayyorlash bo‘limi</h3>
