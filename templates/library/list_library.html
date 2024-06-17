@@ -6,16 +6,16 @@
     <div class="row">
         <div class="col-lg-8 col-12">
             <div class="single-widget recent-post">
-                <h3 class="title mb-5">Kutubxona</h3>
                 <!-- Single Post -->
+                 <br><br>
                 {% for lb in libraries_objects %}
                     <div class="single-post">
                         <div class="content">
-                            <h5><a href="{% url 'library_deatil' lb.id %}">{{ lb.title }}</a></h5>
+                            <h5><a href="{% url 'library_deatil' lb.id %}">{{ lb.title  }}</a></h5>
                             <ul class="comment">
-                                <li><i class="fa fa-calendar" aria-hidden="true"></i>{{ lb.added_date }}</li>
-                                <li><i class="fa-solid fa-eye" aria-hidden="true"></i> {{ lb.views }}</li>
+                                <li><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;{{ lb.added_date }}&nbsp;&nbsp;&nbsp;<i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;{{ lb.views }}</li>
                             </ul>
+                            <br>
                         </div>
                     </div>
                 {% endfor %}
@@ -38,6 +38,7 @@
                     </div>    
                 </form>
                 <!--/ End Single Widget -->
+                <br><br>
                 <!-- Single Widget -->
                 <div class="single-widget category">
                     <h3 class="title">KUTUBXONA</h3>

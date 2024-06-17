@@ -51,7 +51,7 @@
 				<div class="container">
 					<div class="inner">
 						<div class="row">
-							<div class="col-lg-2 col-md-3 col-20">
+							<div class="col-lg-20 col-md-1 col-100">
 								<!-- Start Logo -->
 								<div class="logo">
 									<a href="{% url 'home_page' %}"><img style="height: 50px; width: 50px;" src="{% static 'img/logo.webp' %}" alt="#"></a>
@@ -83,8 +83,8 @@
 											</li>
 											<li><a href="#">Mediateka <i class="icofont-rounded-down"></i></a>
 												<ul class="dropdown">
-													<li><a href="#">FOTOGALEREYA</a></li>
-													<li><a href="#">VIDEOGALEREYA</a></li>
+													<li><a href="{% url 'photo_list' %}">FOTOGALEREYA</a></li>
+													<li><a href="{% url 'video_list' %}">VIDEOGALEREYA</a></li>
 												</ul>
 											</li>
 											<li><a href="{% url 'contactus' %}">Biz bilan bog'laning</a></li>
@@ -130,16 +130,16 @@
 								<div class="row">
 									<div class="col-lg-6 col-md-6 col-12">
 										<ul>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Kutubxona</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Talabalar uchun</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Faoliyat</a></li>
+											<li><a href="/library/library-list"><i class="fa fa-caret-right" aria-hidden="true"></i>Kutubxona</a></li>
+											<li><a href="/faoliyat"><i class="fa fa-caret-right" aria-hidden="true"></i>Faoliyat</a></li>
+											<li><a href="/news/news-list"><i class="fa fa-caret-right" aria-hidden="true"></i>E'lonlar</a></li>
 										</ul>
 									</div>	
-									<div class="col-lg-6 col-md-6 col-12">
+									<div class="col-lg-5 col-md-6 col-12">
 										<ul>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>E'lonlar</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Mediateka</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Biz bilan bog'laning</a></li>
+											<li><a href="/gallery/photo-list"><i class="fa fa-caret-right" aria-hidden="true"></i>Fotogalereya</a></li>
+											<li><a href="/gallery/video-list"><i class="fa fa-caret-right" aria-hidden="true"></i>Videogalereya</a></li>
+											<li><a href="/contactus"><i class="fa fa-caret-right" aria-hidden="true"></i>Biz bilan bog'laning</a></li>
 										</ul>
 									</div>
 								</div>
@@ -214,7 +214,7 @@
 		<!-- Magnific Popup JS -->
 		<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
 		<!-- Counter Up CDN JS -->
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js' %}"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js'"></script>
 		<!-- Bootstrap JS -->
 		<script src="{% static 'js/bootstrap.min.js' %}"></script>
 		<!-- Main JS -->

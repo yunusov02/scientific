@@ -22,7 +22,7 @@ class PhotoDetailView(DetailView):
 class VideoListView(ListView):
     model = Video
     context_object_name = "videos"
-    template_name = "gallery/list_photo.html"
+    template_name = "gallery/list_video.html"
 
 
 class VideoDetailView(DetailView):
