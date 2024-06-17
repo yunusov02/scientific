@@ -1,0 +1,564 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta Tags -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="keywords" content="Site keywords here">
+		<meta name="description" content="">
+		<meta name='copyright' content=''>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- Title -->
+        <title>Scientific Site</title>		
+		<!-- Favicon -->
+        <link rel="icon" href="{% static 'img/favicon.png' %}">
+		
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+		<!-- Nice Select CSS -->
+		<link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+		<!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+		<!-- icofont CSS -->
+        <link rel="stylesheet" href="{% static 'css/icofont.css' %}">
+		<!-- Slicknav -->
+		<link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}">
+		<!-- Owl Carousel CSS -->
+        <link rel="stylesheet" href="{% static 'css/owl-carousel.css' %}">
+		<!-- Datepicker CSS -->
+		<link rel="stylesheet" href="{% static 'css/datepicker.css' %}">
+		<!-- Animate CSS -->
+        <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+		<!-- Magnific Popup CSS -->
+        <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+		
+		<!-- Medipro CSS -->
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+		
+    </head>
+    <body>	
+		<!-- Header Area -->
+		<header class="header" >
+			<!-- Header Inner -->
+			<div class="header-inner">
+				<div class="container">
+					<div class="inner">
+						<div class="row">
+							<div class="col-lg-2 col-md-3 col-20">
+								<!-- Start Logo -->
+								<div class="logo">
+									<a href="index.html"><img style="height: 50px; width: 50px;" src="{% static 'img/logo.webp' %}" alt="#"></a>
+								</div>
+								<!-- End Logo -->
+								<!-- Mobile Nav -->
+								<div class="mobile-nav"></div>
+								<!-- End Mobile Nav -->
+							</div>
+							<div class="col-lg-20 col-md-9 col-20">
+								<!-- Main Menu -->
+								<div class="main-menu">
+									<nav class="navigation">
+										<ul class="nav menu">
+											<li class="active"><a href="#">KUTUBXONA <i class="icofont-rounded-down"></i></a>
+												<ul class="dropdown">
+													<li><a href="index.html">Home Page 1</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Talabalar uchun </a></li>
+											<li><a href="#">Faoliyat </a></li>
+											<li><a href="#">E'lonlar <i class="icofont-rounded-down"></i></a>
+												<ul class="dropdown">
+													<li><a href="404.html">404 Error</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Mediateka <i class="icofont-rounded-down"></i></a>
+												<ul class="dropdown">
+													<li><a href="blog-single.html">Blog Details</a></li>
+												</ul>
+											</li>
+											<li><a href="contact.html">Biz bilan bog'laning</a></li>
+										</ul>
+									</nav>
+								</div>
+								<!--/ End Main Menu -->
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Header Inner -->
+		</header>
+		<!-- End Header Area -->
+		
+		<!-- Slider Area -->
+		<section class="slider">
+			<div class="hero-slider">
+				<!-- Start Single Slider -->
+				<div class="single-slider" style="background-image:url('img/slider2.jpg')">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7">
+								<div class="text">
+									<h1>{{ last_three_library.0.title }}</h1>
+									<p class="truncate">{{ last_three_library.0.description }}</p>
+
+									<div class="button">
+										<a href="#" class="btn">Kirish</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Single Slider -->
+				<!-- Start Single Slider -->
+				<div class="single-slider" style="background-image:url('img/slider.jpg')">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7">
+								<div class="text">
+									<h1>{{ last_three_library.1.title }}</h1>
+									<p class="truncate">{{ last_three_library.1.description }}</p>
+
+									<div class="button">
+										<a href="#" class="btn">Kirish</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Start End Slider -->
+				<!-- Start Single Slider -->
+				<div class="single-slider" style="background-image:url('img/slider3.jpg')">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7">
+								<div class="text">
+									<h1>{{ last_three_library.2.title }}</h1>
+									<p class="truncate">{{ last_three_library.2.description }}</p>
+
+									<div class="button">
+										<a href="#" class="btn">Kirish</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Single Slider -->
+			</div>
+		</section>
+		<!--/ End Slider Area -->
+		
+		<!-- Start Schedule Area -->
+		<section class="schedule">
+			<div class="container">
+				<div class="schedule-inner">
+					<div class="row">
+						<div class="col-lg-4 col-md-6 col-12 ">
+							<!-- single-schedule -->
+							<div class="single-schedule first">
+								<div class="inner">
+									<div class="icon">
+										<i class="fa fa-ambulance"></i>
+									</div>
+									<div class="single-content">
+										<span>{{ last_three_news.0.get_news_type_display }}</span>
+										<h4>{{ last_three_news.0.title }}</h4>
+										<p class="truncate">{{ last_three_news.0.description }}</p>
+										<a href="#">Kirish<i class="fa fa-long-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 col-12">
+							<!-- single-schedule -->
+							<div class="single-schedule middle">
+								<div class="inner">
+									<div class="icon">
+										<i class="icofont-prescription"></i>
+									</div>
+									<div class="single-content">
+										<span>{{ last_three_news.1.get_news_type_display }}</span>
+										<h4>{{ last_three_news.1.title }}</h4>
+										<p class="truncate">{{ last_three_news.1.description }}</p>
+										<a href="#">Kirish<i class="fa fa-long-arrow-right"></i></a>
+									</div>
+								
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-12 col-12">
+							<!-- single-schedule -->
+							<div class="single-schedule last">
+								<div class="inner">
+									<div class="icon">
+										<i class="icofont-ui-clock"></i>
+									</div>
+									<div class="single-content">
+										<span>{{ last_three_news.2.get_news_type_display }}</span>
+										<h4>{{ last_three_news.2.title }}</h4>
+										<p class="truncate">{{ last_three_news.2.description }}</p>
+										<a href="#">Kirish<i class="fa fa-long-arrow-right"></i></a>
+									</div>
+								
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/End Start schedule Area -->
+
+		<!-- Start Feautes -->
+		<section class="Feautes section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>O'zbekiston Xalqaro Islom Akademiyasi</h2>
+							<p>Ilmiy-tadqiqotlar, innovatsiyalar va ilmiy-pedagogik kadrlar tayyorlash bo‘limining vazifalari:</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-12">
+						<!-- Start Single features -->
+						<div class="single-features">
+							<div class="signle-icon">
+								<i class="icofont icofont-ambulance-cross"></i>
+							</div>
+							<h3>1</h3>
+							<p>Akademiyaning ilmiy tadqiqot ishlari rejasini ishlab chiqish va amalga oshirilishini muntazam nazorat qilish</p>
+						</div>
+						<!-- End Single features -->
+					</div>
+					<div class="col-lg-4 col-12">
+						<!-- Start Single features -->
+						<div class="single-features">
+							<div class="signle-icon">
+								<i class="icofont icofont-medical-sign-alt"></i>
+							</div>
+							<h3>2</h3>
+							<p>Akademiyada tayanch doktorantura, doktorantura hamda mustaqil izlanuvchilar qabul jarayonini tashkil etish</p>
+						</div>
+						<!-- End Single features -->
+					</div>
+					<div class="col-lg-4 col-12">
+						<!-- Start Single features -->
+						<div class="single-features last">
+							<div class="signle-icon">
+								<i class="icofont icofont-stethoscope"></i>
+							</div>
+							<h3>3</h3>
+							<p>Akademiyada tayanch doktorantura, doktorantura hamda mustaqil izlanuvchilar qabul jarayonini tashkil etish</p>
+						</div>
+						<!-- End Single features -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Feautes -->
+		
+		<!-- Start Fun-facts -->
+		<div id="fun-facts" class="fun-facts section overlay">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Fun -->
+						<div class="single-fun">
+							<i class="icofont icofont-home"></i>
+							<div class="content">
+								<span class="counter">3468</span>
+								<p>Jami yuklangan materiallar</p>
+							</div>
+						</div>
+						<!-- End Single Fun -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Fun -->
+						<div class="single-fun">
+							<i class="icofont icofont-user-alt-3"></i>
+							<div class="content">
+								<span class="counter">557</span>
+								<p>Jami ko'rishlar soni</p>
+							</div>
+						</div>
+						<!-- End Single Fun -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Fun -->
+						<div class="single-fun">
+							<i class="icofont-simple-smile"></i>
+							<div class="content">
+								<span class="counter">4379</span>
+								<p>Bu oyda yuklangan materiallar soni</p>
+							</div>
+						</div>
+						<!-- End Single Fun -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Fun -->
+						<div class="single-fun">
+							<i class="icofont icofont-table"></i>
+							<div class="content">
+								<span class="counter">32</span>
+								<p>Bu oydagi ko'rishlar soni</p>
+							</div>
+						</div>
+						<!-- End Single Fun -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/ End Fun-facts -->
+		
+
+		
+		<!-- Start portfolio -->
+		<section class="portfolio section" >
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>FOTOGALEREYA</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12 col-12">
+						<div class="owl-carousel portfolio-slider">
+							<div class="single-pf">
+								<img src="img/pf1.jpg" alt="#">
+								<a href="portfolio-details.html" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="img/pf2.jpg" alt="#">
+								<a href="portfolio-details.html" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="img/pf3.jpg" alt="#">
+								<a href="portfolio-details.html" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="img/pf4.jpg" alt="#">
+								<a href="portfolio-details.html" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="img/pf1.jpg" alt="#">
+								<a href="portfolio-details.html" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="img/pf2.jpg" alt="#">
+								<a href="portfolio-details.html" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="img/pf3.jpg" alt="#">
+								<a href="portfolio-details.html" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="img/pf4.jpg" alt="#">
+								<a href="portfolio-details.html" class="btn">View Details</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End portfolio -->
+		
+		
+		<!-- Start Blog Area -->
+		<section class="blog section" id="blog">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>VIDEOGALEREYA</h2>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<img src="img/blog1.jpg" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div class="date">22 Aug, 2020</div>
+									<h2><a href="blog-single.html">We have annnocuced our new product.</a></h2>
+									<p class="text">Lorem ipsum dolor a sit ameti, consectetur adipisicing elit, sed do eiusmod tempor incididunt sed do incididunt sed.</p>
+								</div>
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<img src="img/blog2.jpg" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div class="date">15 Jul, 2020</div>
+									<h2><a href="blog-single.html">Top five way for solving teeth problems.</a></h2>
+									<p class="text">Lorem ipsum dolor a sit ameti, consectetur adipisicing elit, sed do eiusmod tempor incididunt sed do incididunt sed.</p>
+								</div>
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<img src="img/blog3.jpg" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div class="date">05 Jan, 2020</div>
+									<h2><a href="blog-single.html">We provide highly business soliutions.</a></h2>
+									<p class="text">Lorem ipsum dolor a sit ameti, consectetur adipisicing elit, sed do eiusmod tempor incididunt sed do incididunt sed.</p>
+								</div>
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Blog Area -->
+			
+		
+		<!-- Footer Area -->
+		<footer id="footer" class="footer ">
+			<!-- Footer Top -->
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer">
+								<h2>Biz haqimizda!</h2>
+								<p>O'zbekiston Xalqaro Islom Akademiyasi Ilmiy-tadqiqotlar, innovatsiyalar va ilmiy-pedagogik kadrlar tayyorlash bo‘limi</p>
+								<!-- Social -->
+								<ul class="social">
+									<li><a href="#"><i class="icofont-facebook"></i></a></li>
+									<li><a href="#"><i class="icofont-google-plus"></i></a></li>
+									<li><a href="#"><i class="icofont-twitter"></i></a></li>
+								</ul>
+								<!-- End Social -->
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer f-link">
+								<h2>Tezkor linklar</h2>
+								<div class="row">
+									<div class="col-lg-6 col-md-6 col-12">
+										<ul>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Kutubxona</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Talabalar uchun</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Faoliyat</a></li>
+										</ul>
+									</div>	
+									<div class="col-lg-6 col-md-6 col-12">
+										<ul>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>E'lonlar</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Mediateka</a></li>
+											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Biz bilan bog'laning</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer">
+								<h2>Ish vaqti</h2>
+								<p>...</p>
+								<ul class="time-sidual">
+									<li class="day">Dushanba - Juma <span>8.30-17.00</span></li>
+									<li class="day">Shanba <span>8.30-16.00</span></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer">
+								<h2>Joylashuv</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Footer Top -->
+			<!-- Copyright -->
+			<div class="copyright">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-12">
+							<div class="copyright-content">
+								<p>© Copyright 2024  |  All Rights Reserved by Ravskhan</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Copyright -->
+		</footer>
+		<!--/ End Footer Area -->
+		
+		<!-- jquery Min JS -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+		<!-- jquery Migrate JS -->
+		<script src="{% static 'js/jquery-migrate-3.0.0.js' %}"></script>
+		<!-- jquery Ui JS -->
+		<script src="{% static 'js/jquery-ui.min.js' %}"></script>
+		<!-- Easing JS -->
+        <script src="{% static 'js/easing.js' %}"></script>
+		<!-- Color JS -->
+		<script src="{% static 'js/colors.js' %}"></script>
+		<!-- Popper JS -->
+		<script src="{% static 'js/popper.min.js' %}"></script>
+		<!-- Bootstrap Datepicker JS -->
+		<script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+		<!-- Jquery Nav JS -->
+        <script src="{% static 'js/jquery.nav.js' %}"></script>
+		<!-- Slicknav JS -->
+		<script src="{% static 'js/slicknav.min.js' %}"></script>
+		<!-- ScrollUp JS -->
+        <script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
+		<!-- Niceselect JS -->
+		<script src="{% static 'js/niceselect.js' %}"></script>
+		<!-- Tilt Jquery JS -->
+		<script src="{% static 'js/tilt.jquery.min.js' %}"></script>
+		<!-- Owl Carousel JS -->
+        <script src="{% static 'js/owl-carousel.js' %}"></script>
+		<!-- counterup JS -->
+		<script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+		<!-- Steller JS -->
+		<script src="{% static 'js/steller.js' %}"></script>
+		<!-- Wow JS -->
+		<script src="{% static 'js/wow.min.js' %}"></script>
+		<!-- Magnific Popup JS -->
+		<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+		<!-- Counter Up CDN JS -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js' %}"></script>
+		<!-- Bootstrap JS -->
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<!-- Main JS -->
+		<script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>
