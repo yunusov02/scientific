@@ -1,25 +1,27 @@
 {% extends 'base.html' %}
+
+{% load static %}
+
 {% block context %}
-<section class="slider">
+<section class="slider" style="background-image: url( {% static 'img/black1.png' %} );">
     <div class="hero-slider">
         <!-- Start Single Slider -->
         {% for library in last_three_library %}
-        <div class="single-slider" style="background-image:url('')">
+        <div class="single-slider">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7">
                         <div class="text">
                             <h1>{{ library.title }}</h1>
                             <p class="truncate">{{ library.description }}</p>
-
                             <div class="button">
                                 <a href="#" class="btn">Kirish</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div>  
+        </div>        
         {% endfor %}
         <!-- End Single Slider -->
     </div>
@@ -72,7 +74,7 @@
                 <!-- Start Single features -->
                 <div class="single-features">
                     <div class="signle-icon">
-                        <i class="icofont icofont-ambulance-cross"></i>
+                        <i class="icofont-book"></i>
                     </div>
                     <h3>1</h3>
                     <p>Akademiyaning ilmiy tadqiqot ishlari rejasini ishlab chiqish va amalga oshirilishini muntazam nazorat qilish</p>
@@ -83,7 +85,7 @@
                 <!-- Start Single features -->
                 <div class="single-features">
                     <div class="signle-icon">
-                        <i class="icofont icofont-medical-sign-alt"></i>
+                        <i class="icofont-student-alt"></i>
                     </div>
                     <h3>2</h3>
                     <p>Akademiyada tayanch doktorantura, doktorantura hamda mustaqil izlanuvchilar qabul jarayonini tashkil etish</p>
@@ -94,7 +96,7 @@
                 <!-- Start Single features -->
                 <div class="single-features last">
                     <div class="signle-icon">
-                        <i class="icofont icofont-stethoscope"></i>
+                        <i class="icofont-university"></i>
                     </div>
                     <h3>3</h3>
                     <p>Akademiyada tayanch doktorantura, doktorantura hamda mustaqil izlanuvchilar qabul jarayonini tashkil etish</p>
@@ -113,7 +115,7 @@
             <div class="col-lg-3 col-md-6 col-12">
                 <!-- Start Single Fun -->
                 <div class="single-fun">
-                    <i class="icofont icofont-home"></i>
+                    <i class="icofont-book"></i>
                     <div class="content">
                         <span class="counter">{{ total_count_library }}</span>
                         <p>Jami yuklangan materiallar</p>
@@ -124,7 +126,7 @@
             <div class="col-lg-3 col-md-6 col-12">
                 <!-- Start Single Fun -->
                 <div class="single-fun">
-                    <i class="icofont icofont-user-alt-3"></i>
+                    <i class="icofont-eye"></i>
                     <div class="content">
                         <span class="counter">{{ total_count_views }}</span>
                         <p>Jami ko'rishlar soni</p>
@@ -135,7 +137,7 @@
             <div class="col-lg-3 col-md-6 col-12">
                 <!-- Start Single Fun -->
                 <div class="single-fun">
-                    <i class="icofont-simple-smile"></i>
+                    <i class="icofont-book"></i>
                     <div class="content">
                         <span class="counter">{{ current_month_upload_count }}</span>
                         <p>Bu oyda yuklangan materiallar soni</p>
@@ -146,7 +148,7 @@
             <div class="col-lg-3 col-md-6 col-12">
                 <!-- Start Single Fun -->
                 <div class="single-fun">
-                    <i class="icofont icofont-table"></i>
+                    <i class="icofont-eye"></i>
                     <div class="content">
                         <span class="counter">{{ current_month_upload_views }}</span>
                         <p>Bu oydagi ko'rishlar soni</p>

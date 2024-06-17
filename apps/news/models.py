@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 
@@ -16,8 +17,8 @@ NEWS_TYPE = (
 class News(models.Model):
     news_type = models.IntegerField(choices=NEWS_TYPE)
     title = models.CharField(max_length=1023)
-    description = models.TextField()
-    photo = models.ImageField(upload_to='news/', default='static/img/defalut.jpg')
+    description = RichTextField()
+    photo = models.ImageField(upload_to='news/', default='back1.jpg')
 
     views = models.IntegerField(default=1)
     added_date = models.DateTimeField(auto_now_add=True)
