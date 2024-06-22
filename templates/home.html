@@ -1,0 +1,194 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block context %}
+<section class="slider" style="background-image: url( {% static 'img/black1.png' %} );">
+    <div class="hero-slider">
+        <!-- Start Single Slider -->
+        {% for library in last_three_library %}
+        <div class="single-slider">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="text">
+                            <h1 class="truncate">{{ library.title }}</h1>
+                            <p class="truncate">{{ library.description }}</p>
+                            <div class="button">
+                                <a href="{% url 'library_deatil' library.id %}" class="btn">Kirish</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>        
+        {% endfor %}
+        <!-- End Single Slider -->
+    </div>
+</section>
+<!--/ End Slider Area -->
+
+
+<!-- Start Schedule Area -->
+<section class="schedule">
+    <div class="container">
+        <div class="schedule-inner">
+            <div class="row">
+                {% for news in last_three_news %}    
+                <div class="col-lg-4 col-md-6 col-12 ">
+                    <!-- single-schedule -->
+                    <div class="single-schedule first">
+                        <div class="inner">
+                            <div class="icon">
+                                <i class="fa fa-book"></i>
+                            </div>
+                            <div class="single-content">
+                                <span>{{ news.get_news_type_display }}</span>
+                                <h4>{{ news.title }}</h4>
+                                <p>{{ news.min_desc | safe }}</p>
+                                <a href="{% url 'news-detail' news.id %}">Kirish<i class="fa fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!--/End Start schedule Area -->
+
+<!-- Start Feautes -->
+<section class="Feautes section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>O'zbekiston Xalqaro Islom Akademiyasi</h2>
+                    <p>Ilmiy-tadqiqotlar, innovatsiyalar va ilmiy-pedagogik kadrlar tayyorlash bo‘limining vazifalari:</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-12">
+                <!-- Start Single features -->
+                <div class="single-features">
+                    <div class="signle-icon">
+                        <i class="icofont-book"></i>
+                    </div>
+                    <h3>1</h3>
+                    <p>Akademiyaning ilmiy tadqiqot ishlari rejasini ishlab chiqish va amalga oshirilishini muntazam nazorat qilish</p>
+                </div>
+                <!-- End Single features -->
+            </div>
+            <div class="col-lg-4 col-12">
+                <!-- Start Single features -->
+                <div class="single-features">
+                    <div class="signle-icon">
+                        <i class="icofont-student-alt"></i>
+                    </div>
+                    <h3>2</h3>
+                    <p>Akademiyada tayanch doktorantura, doktorantura hamda mustaqil izlanuvchilar qabul jarayonini tashkil etish</p>
+                </div>
+                <!-- End Single features -->
+            </div>
+            <div class="col-lg-4 col-12">
+                <!-- Start Single features -->
+                <div class="single-features last">
+                    <div class="signle-icon">
+                        <i class="icofont-university"></i>
+                    </div>
+                    <h3>3</h3>
+                    <p>Akademiyada tayanch doktorantura, doktorantura hamda mustaqil izlanuvchilar qabul jarayonini tashkil etish</p>
+                </div>
+                <!-- End Single features -->
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ End Feautes -->
+
+<!-- Start Fun-facts -->
+<div id="fun-facts" class="fun-facts section overlay">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Fun -->
+                <div class="single-fun">
+                    <i class="icofont-book"></i>
+                    <div class="content">
+                        <span class="counter">{{ total_count_library }}</span>
+                        <p>Jami yuklangan materiallar</p>
+                    </div>
+                </div>
+                <!-- End Single Fun -->
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Fun -->
+                <div class="single-fun">
+                    <i class="icofont-eye"></i>
+                    <div class="content">
+                        <span class="counter">{{ total_count_views }}</span>
+                        <p>Jami ko'rishlar soni</p>
+                    </div>
+                </div>
+                <!-- End Single Fun -->
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Fun -->
+                <div class="single-fun">
+                    <i class="icofont-book"></i>
+                    <div class="content">
+                        <span class="counter">{{ current_month_upload_count }}</span>
+                        <p>Bu oyda yuklangan materiallar soni</p>
+                    </div>
+                </div>
+                <!-- End Single Fun -->
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Fun -->
+                <div class="single-fun">
+                    <i class="icofont-eye"></i>
+                    <div class="content">
+                        <span class="counter">{{ current_month_upload_views }}</span>
+                        <p>Bu oydagi ko'rishlar soni</p>
+                    </div>
+                </div>
+                <!-- End Single Fun -->
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ End Fun-facts -->
+
+
+
+<!-- Start portfolio -->
+<section class="portfolio section" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>FOTOGALEREYA</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <div class="owl-carousel portfolio-slider">
+                    {% for img in last_five_photo %}
+                    <div class="single-pf">
+                        <img src="{{ img.photo.url }}" alt="#">
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ End portfolio -->
+
+
+{% endblock %}

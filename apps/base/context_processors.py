@@ -7,5 +7,5 @@ def navbar_choices(request):
 
     return {
         "news": news,
-        "library": library
+        "libraries": library
     }

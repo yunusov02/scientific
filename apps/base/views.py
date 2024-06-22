@@ -34,6 +34,15 @@ def home_page(request):
         "last_five_photo": last_five_photo,
         "last_three_video": last_three_video
     }
-    return render(request, "index.html", context=context)
 
+
+    return render(request, "home.html", context=context)
+
+
+def faoliyat(request):
+    return render(request, "faoliyat-details.html")
+
+
+def contactus(request):
+    return render(request, "contact.html")
 

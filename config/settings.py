@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
 
     # third party packages
     'rest_framework',
@@ -52,6 +53,7 @@ INSTALLED_APPS = [
     'apps.library',
     'apps.news',
     'apps.gallery',
+
 ]
 
 MIDDLEWARE = [

@@ -586,6 +586,14 @@ body{
 	End Header CSS
 ===========================*/
 
+.limited-lines {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
 /*===========================
 	Start Hero Area CSS
 =============================*/
@@ -645,6 +653,7 @@ body{
     width: 100%;
 	margin-top:-25px;
 }
+
 .slider .owl-carousel .owl-nav div {
 	height: 50px;
 	width: 50px;
@@ -1195,6 +1204,18 @@ body{
 .portfolio .owl-nav{
 	display:none;
 }
+
+
+.truncate {
+	display: -webkit-box;
+	-webkit-line-clamp: 3; /* Ko'rsatiladigan qatorlar soni */
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
+
 /* Slider Nav */
 .pf-details .image-slider .owl-nav{
 	margin: 0;
