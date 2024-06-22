@@ -1,10 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.db.models import Sum
 from django.views.generic import View, ListView
+from django.contrib import messages
 
 from apps.library.models import Library
 from apps.news.models import News
 from apps.gallery.models import Photo, Video
+from .forms import ContactUsForm
 
 from .config import CURRENT_MONTH, CURRENT_YEAR
 # Create your views here.
@@ -44,5 +46,17 @@ def faoliyat(request):
 
 
 def contactus(request):
+
+    if request.method == 'POST':
+        form = ContactUsForm(request.POST)
+        print(form.data)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Xabar jo'natildi.")
+            return redirect('contactus')
+        else:
+            return render(request, 'blog/post_form.html', {'form': form})
+
+
     return render(request, "contact.html")
 
