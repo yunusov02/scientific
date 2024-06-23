@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block context %}	
+		<!-- Start Portfolio Details Area -->
+		<section class="pf-details section">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="inner-content">
+							<div class="image-slider">
+								<img src="{{ new.photo.url }}" alt="#" style="height: 30vw; object-fit: cover; object-position: center;">
+							</div>
+							<div class="date">
+								<ul>
+									<li><span>E'lon turi :</span> {{ new.get_news_type_display }} </li>
+									<li><span>Qo'shilgan sana :</span> {{ new.added_date }} </li>
+									<li><span>Ko'rishlar soni :</span>{{ new.views }}</li>
+								</ul>
+							</div>
+							<div class="body-text">
+								<h3>{{ new.title }}</h3>
+                                {{ new.description | safe}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Portfolio Details Area -->
+
+
+{% endblock %}

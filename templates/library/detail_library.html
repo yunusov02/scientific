@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block context %}	
+		<!-- Start Portfolio Details Area -->
+		<section class="pf-details section">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="inner-content">
+							<div class="date">
+								<ul>
+									<li><span>Hujjat turi :</span> {{ lib.get_type_display }} </li>
+                                    <li><span>Qo'shilgan sana :</span> {{ lib.added_date }} </li>
+									<li><span>Ko'rishlar soni :</span>{{ lib.views }}</li>
+								</ul>
+							</div>
+                            <div class="date">
+                                <ul>
+                                    <li><span>Kafedra :</span> {{ lib.department.name }} </li>
+                                    <li><span>Talaba/Professor</span>{{ lib.get_job_title_display }}</li>
+                                    <li><span>Ism sharifi :</span>{{ lib.full_name }}</li>
+                                </ul>    
+                            </div>
+							<div class="body-text">
+								<h3>{{ lib.title }}</h3>
+                                <p>{{ lib.description }}</p>
+
+                                <div class="mt-2">
+                                    <a href="{{ lib.pdf.url }}" target="_blank" class="btn btn-primary btn-block text-white">Ko'rish</a>
+                                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Portfolio Details Area -->
+
+
+{% endblock %}
